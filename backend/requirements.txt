@@ -1,0 +1,16 @@
+# --- Core (lightweight, always required) ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.1
+pillow==11.1.0
+numpy==2.2.1
+
+# --- ML extras (optional, large download) ---
+# Install separately to enable real BLIP captioning, FLAN-T5 generation and
+# sentence-transformer RAG embeddings:
+#
+#   pip install -r requirements-ml.txt
+#
+# Without these the backend runs in MOCK mode and still serves the full API.

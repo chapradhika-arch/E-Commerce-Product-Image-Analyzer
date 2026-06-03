@@ -1,0 +1,7 @@
+# --- Optional ML stack: enables real models instead of mock fallbacks ---
+# CPU works; a CUDA GPU is much faster. ~3-4 GB of model weights download on
+# first run and are cached under ~/.cache/huggingface.
+torch>=2.2.0
+transformers>=4.44.0
+sentence-transformers>=3.0.0
+accelerate>=0.33.0
