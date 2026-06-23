@@ -1,0 +1,117 @@
+[
+  {
+    "category": "Footwear",
+    "keywords": ["shoe", "shoes", "sneaker", "sneakers", "boot", "boots", "sandal", "sandals", "heel", "heels", "loafer", "slipper", "slippers", "trainer", "footwear"],
+    "snippet": "Engineered for all-day comfort with a cushioned footbed, breathable upper and durable non-slip outsole. Pairs effortlessly with both casual and smart-casual outfits.",
+    "tag_pool": ["footwear", "comfortable", "breathable", "everyday", "non-slip", "lightweight"]
+  },
+  {
+    "category": "Apparel",
+    "boost": 0.6,
+    "keywords": ["shirt", "t-shirt", "tshirt", "dress", "gown", "jacket", "hoodie", "sweater", "jeans", "pants", "trousers", "coat", "blouse", "clothing", "apparel", "outfit", "skirt", "suit", "robe", "frock", "costume", "saree", "sari", "lehenga", "anarkali", "kurta", "kurti", "salwar", "kameez", "dupatta", "shawl", "ethnic", "traditional"],
+    "snippet": "A beautifully crafted garment made from premium fabric with a flattering, comfortable fit. From everyday wear to traditional and ethnic outfits like sarees, lehengas and kurtas, it combines elegant design with versatile styling for any occasion.",
+    "tag_pool": ["apparel", "clothing", "ethnic-wear", "fashion", "premium-fabric", "versatile", "elegant", "wardrobe-staple"]
+  },
+  {
+    "category": "Bags & Accessories",
+    "keywords": ["bag", "backpack", "handbag", "purse", "wallet", "belt", "sunglasses", "goggles", "hat", "cap", "scarf", "gloves", "tie", "briefcase", "clutch", "pouch", "watch", "luggage", "suitcase"],
+    "snippet": "Crafted from high-quality materials with thoughtful organisation and a refined silhouette. Spacious yet compact, built to carry your essentials in style every day.",
+    "tag_pool": ["accessory", "premium-materials", "spacious", "stylish", "durable", "everyday-carry"]
+  },
+  {
+    "category": "Electronics",
+    "keywords": ["phone", "smartphone", "laptop", "headphone", "headphones", "earbud", "earbuds", "earphone", "camera", "speaker", "tablet", "keyboard", "mouse", "charger", "monitor", "television", "computer", "console", "smartwatch", "router", "drone"],
+    "snippet": "Packed with the latest technology for fast, reliable performance and seamless connectivity. Sleek design meets long battery life for work and play on the go.",
+    "tag_pool": ["electronics", "wireless", "high-performance", "long-battery", "portable", "modern"]
+  },
+  {
+    "category": "Beauty & Personal Care",
+    "keywords": ["lipstick", "cream", "lotion", "shampoo", "conditioner", "makeup", "mascara", "foundation", "serum", "soap", "moisturizer", "sunscreen", "polish", "eyeliner", "cosmetic", "facewash", "kajal"],
+    "snippet": "Formulated with nourishing ingredients for a luxurious feel and visible results. Gentle on skin and crafted to fit seamlessly into your daily self-care routine.",
+    "tag_pool": ["beauty", "nourishing", "gentle", "luxurious", "skincare", "self-care"]
+  },
+  {
+    "category": "Grooming & Fragrance",
+    "keywords": ["perfume", "cologne", "fragrance", "deodorant", "razor", "shaver", "trimmer", "aftershave", "beard", "grooming", "comb", "hairbrush", "scent"],
+    "snippet": "A grooming essential designed to keep you looking and feeling your best. Long-lasting freshness and effortless everyday use, with a refined finish for any occasion.",
+    "tag_pool": ["grooming", "fragrance", "long-lasting", "freshness", "everyday", "essential"]
+  },
+  {
+    "category": "Jewelry",
+    "keywords": ["ring", "necklace", "bracelet", "earring", "earrings", "pendant", "chain", "bangle", "jewelry", "jewellery", "brooch", "anklet", "nosepin"],
+    "snippet": "An elegant statement piece finished with meticulous attention to detail. Hypoallergenic and tarnish-resistant, it adds a touch of sophistication to any look.",
+    "tag_pool": ["jewelry", "elegant", "hypoallergenic", "tarnish-resistant", "gift", "statement-piece"]
+  },
+  {
+    "category": "Kitchen Appliances",
+    "keywords": ["refrigerator", "fridge", "microwave", "oven", "toaster", "blender", "mixer", "grinder", "juicer", "kettle", "dishwasher", "induction", "cooker", "chimney", "processor", "appliance", "stove", "geyser", "airfryer"],
+    "snippet": "A powerful and energy-efficient kitchen appliance built to make everyday cooking faster and easier. Durable construction, intuitive controls and a sleek finish that suits any modern kitchen.",
+    "tag_pool": ["kitchen-appliance", "energy-efficient", "powerful", "easy-to-use", "durable", "modern"]
+  },
+  {
+    "category": "Cookware",
+    "keywords": ["pot", "pan", "frying", "skillet", "kadai", "tawa", "saucepan", "wok", "cookware", "utensil", "ladle", "spatula", "casserole"],
+    "snippet": "Made for even heat distribution and effortless cooking, with a sturdy build and a long-lasting non-stick finish. Easy to clean and a dependable staple for any kitchen.",
+    "tag_pool": ["cookware", "non-stick", "even-heating", "durable", "easy-clean", "kitchen-essential"]
+  },
+  {
+    "category": "Crockery & Tableware",
+    "keywords": ["plate", "bowl", "cup", "mug", "dish", "saucer", "cutlery", "spoon", "fork", "tumbler", "glassware", "dinnerware", "tableware", "crockery", "ceramic", "dinner-set"],
+    "snippet": "Elegant, food-safe tableware that brings a refined touch to everyday meals and special occasions alike. Durable, easy to clean and beautifully finished.",
+    "tag_pool": ["crockery", "tableware", "food-safe", "elegant", "dishwasher-safe", "dining"]
+  },
+  {
+    "category": "Home Decor",
+    "keywords": ["curtain", "curtains", "bedsheet", "bedsheets", "cushion", "rug", "carpet", "vase", "candle", "clock", "mirror", "painting", "frame", "lamp", "blanket", "pillow", "throw", "tapestry", "decor", "ornament", "showpiece"],
+    "snippet": "A stylish decor piece that adds warmth, colour and personality to your space. Thoughtfully designed with quality materials to elevate any room's ambience.",
+    "tag_pool": ["home-decor", "stylish", "cozy", "premium-quality", "interior", "accent-piece"]
+  },
+  {
+    "category": "Furniture",
+    "keywords": ["sofa", "couch", "chair", "table", "desk", "bed", "wardrobe", "cabinet", "shelf", "bookshelf", "stool", "bench", "dresser", "recliner", "ottoman", "furniture", "almirah"],
+    "snippet": "Sturdy, well-built furniture combining comfort with timeless design. Crafted from quality materials with a durable finish that complements modern and classic interiors.",
+    "tag_pool": ["furniture", "sturdy", "comfortable", "space-saving", "premium-build", "timeless"]
+  },
+  {
+    "category": "Garden & Outdoor",
+    "keywords": ["plant", "planter", "flowerpot", "potted", "seeds", "garden", "gardening", "watering", "shovel", "trowel", "fertilizer", "lawn", "hose", "sapling", "nursery", "mower", "succulent"],
+    "snippet": "A handy gardening essential built to withstand the outdoors, helping your plants and green spaces thrive. Durable, weather-resistant and easy to use for gardeners of every level.",
+    "tag_pool": ["gardening", "outdoor", "weather-resistant", "durable", "easy-to-use", "green-thumb"]
+  },
+  {
+    "category": "Gifting",
+    "keywords": ["gift", "hamper", "present", "giftbox", "gift-set", "greeting", "bouquet", "souvenir", "combo"],
+    "snippet": "A thoughtfully curated gift, beautifully presented and ready to delight. A perfect choice for birthdays, festivals, anniversaries and every special celebration.",
+    "tag_pool": ["gifting", "curated", "gift-ready", "festive", "thoughtful", "celebration"]
+  },
+  {
+    "category": "Musical Instruments",
+    "keywords": ["guitar", "piano", "violin", "drum", "drums", "flute", "sitar", "tabla", "harmonium", "ukulele", "saxophone", "trumpet", "cello", "clarinet", "instrument", "harmonica", "veena"],
+    "snippet": "A finely tuned musical instrument crafted for rich, resonant sound and comfortable playability. Quality materials and expert build for beginners and seasoned musicians alike.",
+    "tag_pool": ["musical-instrument", "rich-sound", "handcrafted", "playable", "quality-build", "for-musicians"]
+  },
+  {
+    "category": "Toys & Games",
+    "keywords": ["toy", "toys", "doll", "puzzle", "game", "lego", "teddy", "figurine", "blocks", "plush", "rattle", "playset"],
+    "snippet": "Designed to spark imagination and hours of play, with safe, child-friendly materials and vibrant colours. A perfect gift for curious young minds.",
+    "tag_pool": ["toys", "kids", "educational", "safe-materials", "fun", "gift-idea"]
+  },
+  {
+    "category": "Health & Medicine",
+    "keywords": ["medicine", "tablet", "capsule", "syrup", "pill", "pills", "supplement", "vitamin", "ointment", "bandage", "pharmacy", "medication", "inhaler", "sanitizer", "thermometer", "healthcare"],
+    "snippet": "A trusted healthcare product to support your everyday wellbeing. Quality-assured and made to recognised safety standards. Always read the label and consult a professional where needed.",
+    "tag_pool": ["healthcare", "wellness", "quality-assured", "everyday-care", "trusted", "safe"]
+  },
+  {
+    "category": "Sports & Outdoors",
+    "keywords": ["bicycle", "bike", "tent", "racket", "dumbbell", "yoga", "helmet", "bottle", "fitness", "treadmill", "skateboard", "basketball", "football", "cricket", "gym"],
+    "snippet": "Built tough for performance and the outdoors, with rugged materials and an ergonomic design. Lightweight, dependable gear for every adventure and workout.",
+    "tag_pool": ["sports", "outdoor", "rugged", "ergonomic", "lightweight", "performance"]
+  },
+  {
+    "category": "General Merchandise",
+    "keywords": [],
+    "snippet": "A great-value product combining quality and practicality. Thoughtfully designed to meet everyday needs with reliable performance you can count on.",
+    "tag_pool": ["quality", "value", "practical", "reliable", "everyday"]
+  }
+]

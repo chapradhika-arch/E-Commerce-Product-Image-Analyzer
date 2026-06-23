@@ -1,0 +1,180 @@
+<div class="app">
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo">🛒</span>
+      <div>
+        <h1>Product Image Analyzer</h1>
+        <p>Auto-generate titles, descriptions &amp; tags from product images</p>
+      </div>
+    </div>
+
+    @if (health(); as h) {
+      <div class="status" [class.mock]="h.mock_mode">
+        <span class="dot"></span>
+        {{ h.mock_mode ? 'Mock mode' : 'Models live' }}
+        <small>· {{ h.device }} · KB: {{ h.knowledge_base_entries }}</small>
+      </div>
+    } @else {
+      <div class="status offline">
+        <span class="dot"></span> Backend offline
+      </div>
+    }
+  </header>
+
+  <!-- Uploader -->
+  <section
+    class="dropzone"
+    [class.drag]="dragOver()"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave()"
+    (drop)="onDrop($event)"
+  >
+    <input
+      #fileInput
+      type="file"
+      accept="image/*"
+      multiple
+      hidden
+      (change)="onFilesSelected($event)"
+    />
+    <div class="dz-inner">
+      <div class="dz-icon">📤</div>
+      <p class="dz-title">Drag &amp; drop product images here</p>
+      <p class="dz-sub">or</p>
+      <button class="btn" type="button" (click)="fileInput.click()">
+        Browse images
+      </button>
+      <p class="dz-hint">Bulk upload up to {{ maxUploads }} images at a time</p>
+    </div>
+  </section>
+
+  <!-- Pending queue -->
+  @if (hasPending()) {
+    <section class="queue">
+      <div class="queue-head">
+        <strong>{{ pending().length }}</strong> image(s) ready to analyze
+        <div class="queue-actions">
+          <button class="btn ghost" type="button" (click)="clearPending()">
+            Clear
+          </button>
+          <button class="btn primary" type="button" (click)="analyze()" [disabled]="loading()">
+            {{ loading() ? 'Analyzing…' : 'Analyze ' + pending().length + ' image(s)' }}
+          </button>
+        </div>
+      </div>
+      <div class="thumbs">
+        @for (p of pending(); track p.previewUrl) {
+          <img [src]="p.previewUrl" [alt]="p.name" class="thumb" />
+        }
+      </div>
+    </section>
+  }
+
+  @if (errorMsg()) {
+    <div class="error">{{ errorMsg() }}</div>
+  }
+
+  @if (loading()) {
+    <div class="loading"><span class="spinner"></span> Generating listings…</div>
+  }
+
+  <!-- Results toolbar -->
+  @if (hasResults()) {
+    <div class="results-bar">
+      <h2>{{ cards().length }} product card(s)</h2>
+      <div>
+        <button class="btn ghost" type="button" (click)="clearAll()">Clear all</button>
+        <button class="btn success" type="button" (click)="exportCsv()">⬇ Export CSV</button>
+      </div>
+    </div>
+  }
+
+  <!-- Editable product cards -->
+  <section class="cards">
+    @for (card of cards(); track card.id) {
+      <article class="card" [class.has-error]="card.error">
+        <button class="card-remove" type="button" title="Remove" (click)="removeCard(card.id)">✕</button>
+
+        <div class="card-media">
+          @if (card.previewUrl) {
+            <img [src]="card.previewUrl" [alt]="card.filename" />
+          } @else {
+            <div class="no-preview">No preview</div>
+          }
+          @if (card.mock) {
+            <span class="badge mock" title="Produced by deterministic fallback">mock</span>
+          }
+        </div>
+
+        <div class="card-body">
+          <label class="field">
+            <span>Title</span>
+            <input
+              type="text"
+              [ngModel]="card.title"
+              (ngModelChange)="updateField(card.id, 'title', $event)"
+            />
+          </label>
+
+          <label class="field">
+            <span>Category</span>
+            <input
+              type="text"
+              [ngModel]="card.category"
+              (ngModelChange)="updateField(card.id, 'category', $event)"
+            />
+          </label>
+
+          <label class="field">
+            <span>Description</span>
+            <textarea
+              rows="4"
+              [ngModel]="card.description"
+              (ngModelChange)="updateField(card.id, 'description', $event)"
+            ></textarea>
+          </label>
+
+          <label class="field">
+            <span>Tags <small>(comma-separated)</small></span>
+            <input
+              type="text"
+              [ngModel]="card.tagsText"
+              (ngModelChange)="updateTags(card.id, $event)"
+            />
+          </label>
+
+          @if (card.tags.length) {
+            <div class="chips">
+              @for (tag of card.tags; track tag) {
+                <span class="chip">{{ tag }}</span>
+              }
+            </div>
+          }
+
+          <details class="meta">
+            <summary>AI details</summary>
+            <p class="caption"><strong>Caption:</strong> {{ card.caption || '—' }}</p>
+            <p class="filename"><strong>File:</strong> {{ card.filename }}</p>
+            @if (card.rag_sources.length) {
+              <p><strong>RAG context:</strong></p>
+              <ul>
+                @for (src of card.rag_sources; track src.category) {
+                  <li>{{ src.category }} <em>({{ src.score }})</em></li>
+                }
+              </ul>
+            }
+            @if (card.error) {
+              <p class="card-error">⚠ {{ card.error }}</p>
+            }
+          </details>
+        </div>
+      </article>
+    }
+  </section>
+
+  @if (!hasResults() && !hasPending() && !loading()) {
+    <div class="empty">
+      <p>No products yet — upload some images to get started.</p>
+    </div>
+  }
+</div>
